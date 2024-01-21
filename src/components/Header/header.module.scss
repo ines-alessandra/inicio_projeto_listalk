@@ -1,0 +1,72 @@
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 97%;
+    position: absolute;
+    text-align: center;
+    padding: 20px 0px;
+  }
+
+  .mainContainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 1vh; 
+  }
+
+  .image {
+    width: 30px; 
+    height: 30px; 
+    margin-left: 60px; // Espaçamento entre a imagem e os títulos
+  }
+
+  .titleContainer {
+    margin-left: 100px;
+    display: flex;
+    justify-content: center; // Ajustado para centralizar os títulos
+    width: 100%; // Largura completa do contêiner
+    gap: 100px; // Espaçamento entre os títulos
+
+    &__link{
+      text-decoration: none; 
+      color: black;
+    }
+  }
+
+  .leftSection {
+    display: flex;
+    align-items: center;
+  }
+
+  .buttonContainer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .loginButton{
+    background-color: #ffe8d6;
+    border: 2px solid #ffe8d6;
+    &:hover {
+        border: 2px solid #ffe8d6;
+        background-color: #ffc068cb;
+      }
+  }
+  .registerButton{
+    background-color: #ffbf68;
+    border: 2px solid #ffbf68;
+    &:hover {
+        background-color: #ffe8d6;
+      }
+  }
+  .loginButton,
+  .registerButton {
+    border-radius: 7px;
+    padding: 7px 20px;
+    cursor: pointer;
+    transition: background-color 0.4s;
+  
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+
+  }

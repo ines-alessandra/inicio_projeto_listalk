@@ -1,11 +1,11 @@
-.loginContainer{
+.registerContainer{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.login{
+.register{
     width: 800px;
     display: flex;
     justify-content: center;
@@ -16,12 +16,12 @@
 
     border-radius: 15px;
 
-    margin: 80px 50px 0px 50px;
-    padding: 50px 50px 20px 50px;
+    margin: 60px 50px 0px 50px;
+    padding: 30px 50px 17px 30px;
 
     &__input{
         font-size: 14px;
-        margin: 5px 0px 15px 0px;
+        margin: 5px 0px 25px 0px;
         width: 800px;
         padding: 10px 5px;
         border-radius: 5px;
@@ -40,7 +40,7 @@
         }
     }
 
-    &__buttonLogin{
+    &__buttonRegister{
         background-color: #FF9F1C;
 
         border: 2px solid #FF9F1C;

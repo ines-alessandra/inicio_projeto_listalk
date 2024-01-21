@@ -30,15 +30,23 @@ const Login = ({setVisible}) =>{
     )
 
     return(
-        <div className={styles.login}>
-            <button className={styles.login__buttonClose} onClick={() => setVisible(false)}>Close</button>
-            <div className={styles.login__status} >Status: {status}</div>
-            <label htmlFor="login">Login</label>
-            <input className={styles.login__input} type="text" value={login} onChange={(e) => setLogin( e.target.value)} />
-            <label htmlFor="senha" >Senha</label>
-            <input className={styles.login__input} type="password" value={senha} onChange={(e) => setSenha( e.target.value)} />
-            <button className={styles.login__buttonLogin} onClick={() => mutate()}>Login</button>
+        <>
+        <div className={styles.titleSection}>
+            <h2 className={styles.title}>Welcome back!</h2>
+            <h4 className={styles.subTitle}>Your organized world awaits...</h4>
         </div>
+        <div className={styles.loginContainer}>
+            <div className={styles.login}>
+                <div>
+                    <label htmlFor="login" className={styles.login__label}>E-mail Address<span className={styles.login__label__span}>*</span></label>
+                    <input className={styles.login__input} type="text" value={login} onChange={(e) => setLogin( e.target.value)} placeholder="Enter your best e-mail" />
+                    <label htmlFor="senha" className={styles.login__label}>Password<span className={styles.login__label__span}>*</span></label>
+                    <input className={styles.login__input} type="password" value={senha} onChange={(e) => setSenha( e.target.value)} placeholder="Enter a strong password" />
+                </div>
+                <button className={styles.login__buttonLogin} onClick={() => mutate()}>Login</button>
+            </div>
+        </div>
+        </>
     )
 }
 

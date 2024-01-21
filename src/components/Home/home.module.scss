@@ -1,29 +1,87 @@
-.home{
-    background: #FFE8D6;
-
+.home {
+    background: white;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    padding: 20px 85px;
+  }
+  
+  .h1 {
+    margin: 0;
+  }
+  
+  .h1:last-child {
+    margin-right: 0; // Remove a margem do último título
+  }
+  
+  .centeredImage {
+    position: absolute;
+    top: 71.36px;
+    right: 90px;
+    width: 100vw;
+    height: 100vh;
+    max-width: 500px; 
+    max-height: 500px; 
+  }
+  
+  .titleSection {
+    position: absolute;
+    top: 130px;
+    left: 112px;
+    width: 400px;
+    height: 281px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 50px; 
+  }
+  
+  .title {
+    font-family: sans-serif;
+    font-size: 100px;
+    font-weight: 700;
+    line-height: 86px;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-left: 60px;
+    color: #FF9F1C; // Cor do texto no título
+  }
+  
+  .subTitle {
+    font-family: sans-serif;
+    font-size: 100px;
+    font-weight: 700;
+    line-height: 86px;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-top: -5px; // Ajuste para mover "ALK" mais para baixo
+    margin-left: 290px; // Ajuste para mover "ALK" mais para a direita
+    color: #FF9F1C;// Cor do texto no subtítulo
+  }
 
-    padding: 20px 35px;
+  .text{
+    font-family: sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-top: 80px; // Ajuste para mover mais para baixo
+    margin-left: 68px; // Ajuste para mover mais para a direita
+    color: #FF9F1C;// Cor do texto no subtítulo
+    white-space: nowrap;
+  }
 
-    h1{
-        
-    }
-
-    button{
-        background-color: #FFBF68;
-
-        border: 2px solid #FFBF68;
-        border-radius: 7px;
-
-        padding: 7px 20px;
-        
-        cursor: pointer;
-
-        &:hover{
-            background-color: #FFE8D6;
-            transition: all .4s;
-        }
-    }
-}
+  .text2{
+    font-family: sans-serif;
+    font-size: 30px;
+    font-weight: 20;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-top: 15px; // Ajuste para mover mais para baixo
+    margin-left: 68px; // Ajuste para mover mais para a direita
+    color: #FF9F1C;// Cor do texto no subtítulo
+    white-space: nowrap;
+  }
