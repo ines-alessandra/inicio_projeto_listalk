@@ -12,8 +12,8 @@ export default function PageHome() {
   const [visible, setVisible] = useState(false);
   return (
     <main className={styles.mainContainer}>
-      <Header setVisible={setVisible}></Header>
-      {visible && <Login setVisible={setVisible} />}
+      <Header ></Header>
+      
       <Home />
       <Footer />
     </main>

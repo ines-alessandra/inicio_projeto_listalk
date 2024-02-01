@@ -1,8 +1,8 @@
-
 import { getCategoria } from "@/api/categorias/getCategorias";
 import { useState, useEffect } from "react";
 import { useMutation } from "react-query";
 import styles from "./categories.module.scss";
+
 
 const Categories = () =>{
     const [categorias, setCategotias] = useState([]);
@@ -28,8 +28,8 @@ const Categories = () =>{
    
     )
     return(
+        <>
         <div className={styles.categories}>
-            <h1>Categorias</h1>
             <button className={styles.categories__buttonNewCategory}>Nova Categoria</button>
             <h2>Status: {status}</h2>
             <div className={styles.categories__listCategories}>
@@ -42,6 +42,7 @@ const Categories = () =>{
                 }
             </div>
         </div>
+        </>
     )
 }
 

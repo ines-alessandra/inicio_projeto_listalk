@@ -1,0 +1,151 @@
+.listHeader{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 6%;
+    padding-right: 25%;
+
+}
+
+.filtroSection{
+    align-self: flex-end;
+}
+
+.listSection{
+ padding: 40px 120px;
+ display: flex;
+ flex-wrap: wrap;
+ gap: 20px;
+
+}
+.listItem{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 20px;
+    background-color: #D9D9D9;
+    border-radius: 7px;
+    height: 60px;
+    width: 300px;
+    text-decoration: none; 
+    color: black;
+    h3{
+        flex-grow: 1;
+        text-align: center;
+    }
+    img{
+        margin-right: 10px;
+    }
+}
+
+.input{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 90%;
+    input{
+        width: 100%;
+        padding: 10px;
+        border-radius: 7px;
+        border: 1px solid #FFBF68;
+        margin-right: 10px;
+    
+    }
+    button{
+        background-color: #FFBF68;
+        border: none;
+        border-radius: 7px;
+        padding: 10px 20px;
+        cursor: pointer;
+        &:hover{
+            background-color: #FF9F1C;
+            transition: all .4s;
+        }
+    
+    }
+}
+
+.titleSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 100px; 
+}
+  
+.title {
+    font-family: sans-serif;
+    height: 86px;
+    border: none;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 86px;
+    letter-spacing: 0px;
+    text-align: start;
+    color: #FFBF68; // Cor do texto no título
+    &:focus{
+        outline: none;
+    }
+}
+  
+.subTitle {
+    font-family: sans-serif;
+    border: none;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: start;
+    color: black;// Cor do texto no subtítulo
+    &:focus{
+        outline: none;
+    }
+}
+
+.buttonContainer{
+   gap: 20px;
+}
+
+.buttonAdd{
+    background-color: #FF9F1C;
+    align-self: left;
+    margin-right:100px ;
+    border: 2px solid #FF9F1C;
+    border-radius: 7px;
+
+
+    padding: 15px 0;
+    width: 130px;
+
+    
+    cursor: pointer;
+
+    &:hover{
+        background-color: #FFE8D6;
+        transition: all .4s;
+    }
+
+    &:first-child{
+        margin-bottom: 14px;
+        background-color: #FF1C1CA8;
+        border: none;    
+        &:hover{
+            background-color: #FF1C1C;
+            transition: all .4s;
+        }
+    }
+}
+
+.inputContainer{
+    width: 100%;
+    padding-left: 50px;
+}
+
+.bottom{
+    display:flex;
+    justify-content: space-between;
+    
+}

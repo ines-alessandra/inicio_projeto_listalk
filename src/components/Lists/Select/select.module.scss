@@ -1,0 +1,39 @@
+.dropdown{
+    display: flex;
+    position: relative;
+    user-select: none;
+    padding-right: 50px;
+    width: 100%;
+
+}
+
+.button{
+    width: 100%;
+        padding: 10px;
+        border-radius: 7px;
+        border: 1px solid #FFBF68;
+        margin-right: 10px;
+
+}
+
+.list{
+    position: absolute;
+    top: 110%;
+    left: 0;
+    background-color: #D9D9D9;
+    color: #00000096;
+    font-size: 18px;
+    border-radius: 7px;
+    width: 95%;
+    padding: 10px;
+}
+
+.item{
+    padding: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all .4s;
+    &:hover{
+        background-color: #cac7c7;
+    }
+}

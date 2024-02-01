@@ -5,29 +5,20 @@ import { postLogin } from "@/api/login/postLogin";
 import api from "@/api/http-common";
 import { useRouter } from "next/navigation";
 
-const Login = ({setVisible}) =>{
+const Login = () =>{
     const [login, setLogin] = useState("");
     const [senha, setSenha] = useState("");
     const {push} =  useRouter();
 
-    const { status, mutate } = useMutation(
-        async () =>{
-            return postLogin(login, senha);
-        },
-        {
-            onSuccess: (res) =>{
-                console.log(res.data);
-                api.defaults.headers.authorization = `Bearer ${res.data.access_token}`;
-                push("/categoria");
-            },
-
-            onError: (error) =>{
-                console.log(error);
-            }
-
-        }
-   
-    )
+    const logged = async () => {
+        
+        try{
+          await postLogin(login, senha);
+          push('/list');
+        }catch(error){
+          console.log(error);
+        }  
+      }
 
     return(
         <>
@@ -43,7 +34,7 @@ const Login = ({setVisible}) =>{
                     <label htmlFor="senha" className={styles.login__label}>Password<span className={styles.login__label__span}>*</span></label>
                     <input className={styles.login__input} type="password" value={senha} onChange={(e) => setSenha( e.target.value)} placeholder="Enter a strong password" />
                 </div>
-                <button className={styles.login__buttonLogin} onClick={() => mutate()}>Login</button>
+                <button className={styles.login__buttonLogin} onClick={logged}>Login</button>
             </div>
         </div>
         </>

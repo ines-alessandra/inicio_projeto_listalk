@@ -1,10 +1,32 @@
 import styles from "./header.module.scss";
+import api from "@/api/http-common";
 import Link from "next/link";
 import { useRouter } from "next/navigation"
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
-const Header = ({ setVisible }) => {
+const Header = () => {
     const {push} = useRouter();
+    const[session, setSession] = useState(false); //session é a var, e setSession é a função altera valor
+    const verifySession = () => {
+        if (localStorage.getItem('token')){
+            setSession(true);
+        }else{
+            setSession(false);
+        }
+    }
+
+    useEffect(
+        () => {verifySession()},[]
+    );
+
+    const removeToken = () => {
+        localStorage.removeItem('token');
+        api.defaults.headers.authorization = null;
+        setSession(false);
+        push('/');     
+    }
+
     return (
         <div className={styles.header}>
             <div className={styles.leftSection}>
@@ -18,15 +40,26 @@ const Header = ({ setVisible }) => {
             </div>
             <div className={styles.titleContainer}>
                 <Link href="/" className={styles.titleContainer__link}>Home</Link>
-                <h1>About</h1>
+                <Link href="/list" className={styles.titleContainer__link}>Lists</Link>
+                
             </div>
             <div className={styles.buttonContainer}>
-                <button className={styles.loginButton} onClick={() => push("/login")}>
-                    Login
-                </button>
-                <button className={styles.registerButton} onClick={() => push("/register")}>
-                    Register
-                </button>
+                {session &&
+                    <button className={styles.registerButton} onClick={removeToken}>
+                        Logout
+                    </button>
+                }
+                {!session &&
+                    <>
+                        <button className={styles.loginButton} onClick={() => push("/login")}>
+                            Login
+                        </button>
+                        <button className={styles.registerButton} onClick={() => push("/register")}>
+                            Register
+                        </button>
+                    </>
+                }
+                
             </div>
       </div>
     );
